@@ -49,9 +49,6 @@ const Login = () => {
           placeholder="password"
           onChange={handleChange}
         />
-        {/* <button type="submit " className={s.form__btn}>
-          Log in
-        </button> */}
         <Button colorScheme="blue" size="lg" type="submit">
           Log in
         </Button>

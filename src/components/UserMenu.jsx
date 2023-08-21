@@ -12,17 +12,6 @@ export default function UserMenu() {
     <div className={s.user__container}>
       <p className={s.user__link}>Welcome, </p>
       <p className={s.user__name}>{name} </p>
-
-      {/* <button
-        className={s.user__btn}
-        type="submit"
-        onClick={() => {
-          dispatch(authOperations.logOut());
-        }}
-      >
-        Log out
-      </button> */}
-      {/* <Stack spacing={4} direction="row" align="center"> */}
       <Button
         colorScheme="yellow"
         size="lg"
@@ -33,7 +22,6 @@ export default function UserMenu() {
       >
         Log out
       </Button>
-      {/* </Stack>; */}
     </div>
   );
 }

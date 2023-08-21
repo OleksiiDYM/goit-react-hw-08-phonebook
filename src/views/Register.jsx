@@ -63,9 +63,6 @@ const Register = () => {
           placeholder="password"
           onChange={handleChange}
         />
-        {/* <button type="submit " className={s.form__btn}>
-          Registration
-        </button> */}
         <Button colorScheme="yellow" size="lg" type="submit">
           Registration
         </Button>
