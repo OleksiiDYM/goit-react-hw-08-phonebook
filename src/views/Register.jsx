@@ -2,7 +2,6 @@ import { useState } from 'react';
 import authOperations from '../redux/auth/auth-operations';
 import { useDispatch } from 'react-redux';
 import { Button } from '@chakra-ui/button';
-
 import s from '../Styles.module.css';
 
 const Register = () => {

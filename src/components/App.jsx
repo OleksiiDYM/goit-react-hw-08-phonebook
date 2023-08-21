@@ -6,10 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import authOperations from '../redux/auth/auth-operations';
 import authSelectors from '../redux/auth/auth-selectors';
 import { ChakraProvider } from '@chakra-ui/react';
-
 import PrivateRoute from './Routs/PrivateRoute';
 import PublicRoute from './Routs/PublicRoute';
-
 import { Layout } from './Layout';
 
 const HomeView = lazy(() => import('../views/Home'));
@@ -24,8 +22,6 @@ export const App = () => {
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser
   );
-
-  console.log(isFetchingCurrentUser);
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());
@@ -45,7 +41,6 @@ export const App = () => {
                   </PublicRoute>
                 }
               />
-
               <Route
                 path="/register"
                 element={
@@ -54,7 +49,6 @@ export const App = () => {
                   </PublicRoute>
                 }
               />
-
               <Route
                 path="/login"
                 element={
@@ -63,7 +57,6 @@ export const App = () => {
                   </PublicRoute>
                 }
               />
-
               <Route
                 path="/contacts"
                 element={
@@ -81,35 +74,3 @@ export const App = () => {
     )
   );
 };
-
-// ______________________________________________________
-
-// import ContactForm from './ContactForm/ContactForm';
-// import ContactList from './ContactList/ContactList';
-
-// import Finder from './Finder/Finder';
-
-// const mainStyle = {
-
-//   display: 'flex',
-//   flexDirection: 'column',
-//   justifyContent: 'center',
-//   alignItems: 'left',
-//   fontSize: 20,
-//   color: '#3d2f26ed',
-//   marginLeft: '30px',
-// };
-
-// const App = () => {
-//   return (
-//     <section style={mainStyle}>
-//       <h1>Phonebook</h1>
-//       <ContactForm />
-
-//       <h2>Contacts</h2>
-//       <Finder />
-//       <ContactList />
-//     </section>
-//   );
-// };
-// export default App;

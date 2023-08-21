@@ -21,7 +21,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
     return data;
   } catch (error) {
     console.log(error.message);
-    infoToast('The user is alredy registered');
+    infoToast('User is alredy registered');
   }
 });
 
